@@ -1,9 +1,6 @@
 package windows;
-
 import java.awt.Cursor;
-
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -13,8 +10,8 @@ public class Button extends JLabel {
 	public Button(String name, int x, int y) {
 		try {
 			setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/buttons/"+name+".png"))));
-		} catch (IOException e1) {
-			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		setBounds(x,y,getIcon().getIconWidth(),getIcon().getIconHeight());
@@ -23,8 +20,8 @@ public class Button extends JLabel {
 		this(name,x,y);
 		try {
 			this.other = new ImageIcon(ImageIO.read(getClass().getResource("/buttons/"+other+".png")));
-		} catch (IOException e1) {
-			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	public void switchImages() {
