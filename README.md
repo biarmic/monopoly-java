@@ -9,6 +9,7 @@
 * Enum in Java
 * I/O in Java
 * AudioSystem in Java
+* Swing in Java
 
 ## Screenshots
 ![screenshot](screenshot-1.png "Main Menu")
